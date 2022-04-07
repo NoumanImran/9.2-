@@ -106,4 +106,50 @@ Factorial of 4 is 24
   
 //Program # 9.6
   
+main() {
+  print('Enter a Number:');
+  int number = int.parse(stdin.readLineSync()!);
+  print('Nature of number');
+  print('******************');
+  chkNum(n: number);
+}
 
+chkNum({required int n}) {
+  int c = 0;
+  for (int i = 2; i < n; i++) {
+    if (n % i == 0) ;
+    c = 1;
+  }
+  if (n % 2 == 0 && c == 0)
+    print('$n is a prime even number');
+  else if (n % 2 != 0 && c == 0) {
+    print('$n is a odd prime number');
+  } else if (n % 2 == 0 && c != 0) {
+    print('$n is only an even number, Not prime');
+  } else if (n % 2 != 0) {
+    print('$n is only an odd number , not prime');
+  } else {
+    print('it is not a prime number');
+  }
+}
+
+
+/*
+OUTPUT:
+Enter a Number:
+9
+Nature of number
+******************
+9 is only an odd number , not prime
+*/
+
+//Program # 9.7
+  
+Enter first Number:
+5
+Enter Operator:
++
+Enter Second Number:
+5
+First number + Second number = 10
+  
